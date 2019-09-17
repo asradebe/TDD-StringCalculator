@@ -14,6 +14,11 @@ describe("Add", function() {
         expect(Calculator).toBe(33);
     });
 
+    it("should handle any number of arguments", function() {
+        let Calculator = Add("1,1,1,1,1,1,1,1,1,1")
+        expect(Calculator).toBe(10);
+    });
+
     it("should be able to handle new lines between numbers instead of commas", function() {
         let Calculator = Add("1\n2,3\n7") 
         expect(Calculator).toBe(13);
